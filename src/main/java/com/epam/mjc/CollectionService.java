@@ -19,10 +19,9 @@ public class CollectionService {
                 .collect(Collectors.toList());
     }
 
-    public Integer findMax(List<Integer> list) {
+    public Optional<Integer> findMax(List<Integer> list) {
         return list.stream()
-                .max(Integer::compare)
-                .get();
+                .max(Integer::compare);
     }
 
     public Optional<Integer> findMin(List<List<Integer>> list) {
